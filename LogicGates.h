@@ -17,6 +17,7 @@
 #ifndef LogicGates_h
 #define LogicGates_h
 
+    #include <Arduino.h>
     #include <MentorPort.h>
 
     class LogicGates
@@ -46,10 +47,6 @@
             static const uint8_t MICROSEGUNDOS = 0x21;
 
             LogicGates();
-            // Timer methods
-            void crearTemporizador(unsigned long tiempo, uint8_t unidad);
-            void iniciarTemporizador();
-            uint8_t comprobarTemporizador();
             // Counter methods
             void crearContador(uint8_t gpio_entrada);
             uint16_t sumarContador();
