@@ -47,11 +47,6 @@
             static const uint8_t MICROSEGUNDOS = 0x21;
 
             LogicGates();
-            // Counter methods
-            void crearContador(uint8_t gpio_entrada);
-            uint16_t sumarContador();
-            uint16_t restarContador();
-            void reiniciarContador();
             // Flip-Flop methods
             uint8_t actualizarFlipFlopD(uint8_t gpio_entrada, uint8_t gpio_clk);
             uint8_t actualizarFlipFlopT(uint8_t gpio_entrada, uint8_t gpio_clk);
@@ -61,12 +56,6 @@
             uint8_t obtenerFlipFlopT();
             uint8_t obtenerFlipFlopSR();
             uint8_t obtenerFlipFlopJK();
-            // Edge Detector methods
-            uint8_t comprobarFlancoSubida(uint8_t gpio_entrada);
-            uint8_t comprobarFlancoBajada(uint8_t gpio_entrada);
-            // Signal Generator methods
-            void iniciarGenerador(uint8_t gpio_salida, unsigned long periodo, double frecuencia);
-            uint8_t actualizarGenerador();
             // BCD methods
             void obtenerBinario(uint8_t puerto_entrada);
             uint8_t obtenerSegmento(uint8_t segmento);
