@@ -12,11 +12,10 @@
 
         public:
 
-            LogicGatesTimer();
+            LogicGatesTimer(unsigned long tiempo, uint8_t unidad);
 
-            void crearTemporizador(unsigned long tiempo, uint8_t unidad);
-            void iniciarTemporizador();
-            bool comprobarTemporizador();
+            void iniciar();
+            bool comprobar();
 
         private:
 

@@ -45,17 +45,12 @@
 
             static const uint8_t MILISEGUNDOS = 0x20;
             static const uint8_t MICROSEGUNDOS = 0x21;
+            static const uint8_t TIPO_D = 0x22;
+            static const uint8_t TIPO_T = 0x23;
+            static const uint8_t TIPO_SR = 0x24;
+            static const uint8_t TIPO_JK = 0x25;
 
             LogicGates();
-            // Flip-Flop methods
-            uint8_t actualizarFlipFlopD(uint8_t gpio_entrada, uint8_t gpio_clk);
-            uint8_t actualizarFlipFlopT(uint8_t gpio_entrada, uint8_t gpio_clk);
-            uint8_t actualizarFlipFlopSR(uint8_t gpio_entrada, uint8_t gpio_clk);
-            uint8_t actualizarFlipFlopJK(uint8_t gpio_entrada, uint8_t gpio_clk);
-            uint8_t obtenerFlipFlopD();
-            uint8_t obtenerFlipFlopT();
-            uint8_t obtenerFlipFlopSR();
-            uint8_t obtenerFlipFlopJK();
             // BCD methods
             void obtenerBinario(uint8_t puerto_entrada);
             uint8_t obtenerSegmento(uint8_t segmento);

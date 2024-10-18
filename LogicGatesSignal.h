@@ -12,15 +12,20 @@
 
         public:
 
-            LogicGatesSignal(uint8_t gpio_salida, unsigned long periodo, double frecuencia);
+            LogicGatesSignal(uint8_t gpio_salida, uint16_t frecuencia);
 
-            uint8_t actualizarGenerador();
+            void iniciar();
+            void detener();
+            void editarFrecuencia(uint16_t frecuencia);
+            uint8_t actualizar();
 
         private:
 
+            bool _enable;
             uint8_t _gpio_out;
-            double _frequency;
+            uint16_t _frequency;
             unsigned long _period;
+            unsigned long _last_time;
 
     }
 

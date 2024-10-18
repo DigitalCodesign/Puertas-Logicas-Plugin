@@ -7,21 +7,10 @@
 /**
  * 
  */
-LogicGatesTimer::LogicGatesTimer()
+LogicGatesTimer::LogicGatesTimer(unsigned long tiempo, uint8_t unidad)
 {
 
     _start_time = 0;
-    _objetive_time = -1;
-    _use_milliseconds = true;
-
-}
-
-/**
- * 
- */
-void LogicGatesTimer::crearTemporizador(unsigned long tiempo, uint8_t unidad)
-{
-
     _objetive_time = tiempo;
     _use_milliseconds = (unidad == LogicGates::MILISEGUNDOS);
 
@@ -30,7 +19,7 @@ void LogicGatesTimer::crearTemporizador(unsigned long tiempo, uint8_t unidad)
 /**
  * 
  */
-void LogicGatesTimer::iniciarTemporizador()
+void LogicGatesTimer::iniciar()
 {
 
     _use_milliseconds ? _start_time = millis() : _start_time = micros();
@@ -40,7 +29,7 @@ void LogicGatesTimer::iniciarTemporizador()
 /**
  * 
  */
-bool LogicGatesTimer::comprobarTemporizador()
+bool LogicGatesTimer::comprobar()
 {
 
     if(((_use_milliseconds ? millis() : micros()) - _start_time) > _objetive_time)

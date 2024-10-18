@@ -14,8 +14,8 @@
 
             LogicGatesCounter(uint8_t gpio_entrada);
 
-            uint16_t comprobarContador();
-            void reiniciarContador();
+            uint16_t comprobar();
+            void reiniciar();
 
         private:
 

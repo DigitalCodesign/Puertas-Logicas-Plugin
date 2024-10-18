@@ -18,7 +18,7 @@ LogicGatesCounter::LogicGatesCounter(uint8_t gpio_entrada)
 /**
  * 
  */
-uint16_t LogicGatesCounter::comprobarContador()
+uint16_t LogicGatesCounter::comprobar()
 {
 
     return digitalRead(_gpio_in) ? ++_count : _count;
@@ -28,7 +28,7 @@ uint16_t LogicGatesCounter::comprobarContador()
 /**
  * 
  */
-void LogicGatesCounter::reiniciarContador()
+void LogicGatesCounter::reiniciar()
 {
 
     _count = 0;
