@@ -22,12 +22,13 @@
 
         private:
 
-            uint8_t _gpio_T;
+            uint8_t _gpio_S;
+            uint8_t _gpio_R;
             uint8_t _gpio_Q;
             uint8_t _gpio_Qnot;
             uint8_t _gpio_clk;
             bool _last_clk_state;
 
-    }
+    };
 
 #endif

@@ -18,7 +18,7 @@ LogicGatesFlipFlopD::LogicGatesFlipFlopD(
     _gpio_D = gpio_D;
     _gpio_Q = gpio_Q;
     _gpio_Qnot = gpio_Qnot;
-    _gpio_clk = _gpio_clk;
+    _gpio_clk = gpio_clk;
     _last_clk_state = false;
 
     pinMode(_gpio_Q, OUTPUT);
@@ -34,7 +34,9 @@ LogicGatesFlipFlopD::LogicGatesFlipFlopD(
 void LogicGatesFlipFlopD::actualizar()
 {
 
-    if(!_last_clk_state && digitalRead(_gpio_clk))
+    bool actual_clk_state = digitalRead(_gpio_clk);
+
+    if(!_last_clk_state && actual_clk_state)
     {
 
         digitalWrite(_gpio_Q, digitalRead(_gpio_D));
@@ -42,7 +44,7 @@ void LogicGatesFlipFlopD::actualizar()
 
     }
 
-    _last_clk_state = digitalRead(_gpio_clk);
+    _last_clk_state = actual_clk_state;
 
 }
 

@@ -7,12 +7,26 @@
 /**
  * 
  */
+LogicGatesTimer::LogicGatesTimer()
+{
+
+    _start_time = 0;
+    _objetive_time = -1;
+    _use_milliseconds = true;
+    _enable = false;
+
+}
+
+/**
+ * 
+ */
 LogicGatesTimer::LogicGatesTimer(unsigned long tiempo, uint8_t unidad)
 {
 
     _start_time = 0;
     _objetive_time = tiempo;
     _use_milliseconds = (unidad == LogicGates::MILISEGUNDOS);
+    _enable = false;
 
 }
 
@@ -22,7 +36,20 @@ LogicGatesTimer::LogicGatesTimer(unsigned long tiempo, uint8_t unidad)
 void LogicGatesTimer::iniciar()
 {
 
-    _use_milliseconds ? _start_time = millis() : _start_time = micros();
+    _start_time = millis();
+    _enable = true;
+
+}
+
+/**
+ * 
+ */
+void LogicGatesTimer::establecer(unsigned long tiempo, uint8_t unidad)
+{
+
+    _start_time = 0;
+    _objetive_time = tiempo;
+    _use_milliseconds = (unidad == LogicGates::MILISEGUNDOS);
 
 }
 

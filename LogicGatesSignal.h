@@ -27,6 +27,6 @@
             unsigned long _period;
             unsigned long _last_time;
 
-    }
+    };
 
 #endif

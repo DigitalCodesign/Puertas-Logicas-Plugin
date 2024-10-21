@@ -23,7 +23,7 @@ LogicGatesSignal::LogicGatesSignal(uint8_t gpio_salida, uint16_t frecuencia)
 /**
  * 
  */
-LogicGatesSignal::iniciar()
+void LogicGatesSignal::iniciar()
 {
 
     _enable = true;
@@ -33,7 +33,7 @@ LogicGatesSignal::iniciar()
 /**
  * 
  */
-LogicGatesSignal::detener()
+void LogicGatesSignal::detener()
 {
 
     _enable = false;
@@ -43,7 +43,7 @@ LogicGatesSignal::detener()
 /**
  * 
  */
-LogicGatesSignal::editarFrecuencia(uint16_t frecuencia)
+void LogicGatesSignal::editarFrecuencia(uint16_t frecuencia)
 {
 
     _frequency = (frecuencia > 0) ? frecuencia : 0;
@@ -54,7 +54,7 @@ LogicGatesSignal::editarFrecuencia(uint16_t frecuencia)
 /**
  * 
  */
-LogicGatesSignal::actualizar()
+uint8_t LogicGatesSignal::actualizar()
 {
 
 

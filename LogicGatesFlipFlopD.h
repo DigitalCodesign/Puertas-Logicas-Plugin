@@ -28,10 +28,6 @@
             uint8_t _gpio_clk;
             bool _last_clk_state;
 
-    }
+    };
 
 #endif
-
-/*
-
-*/

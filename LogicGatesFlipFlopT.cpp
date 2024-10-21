@@ -19,7 +19,7 @@ LogicGatesFlipFlopT::LogicGatesFlipFlopT(
     _gpio_T = gpio_T;
     _gpio_Q = gpio_Q;
     _gpio_Qnot = gpio_Qnot;
-    _gpio_clk = _gpio_clk;
+    _gpio_clk = gpio_clk;
     _last_clk_state = false;
 
     pinMode(_gpio_Q, OUTPUT);

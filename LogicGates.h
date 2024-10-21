@@ -14,17 +14,19 @@
  * -> Generador de Señales.
  */
 
+#include <Arduino.h>
+
 #ifndef LogicGates_h
 #define LogicGates_h
 
-    #include <Arduino.h>
     #include <MentorPort.h>
 
-    class LogicGates
+    class LogicGates : public MentorPort
     {
 
         public:
 
+            static const uint8_t PUERTO_GENERICO_1 = 0x03;
             static const uint8_t GPIO_A10 = PIN_A10;
             static const uint8_t GPIO_A11 = PIN_A11;
             static const uint8_t GPIO_D35 = 35;
@@ -34,6 +36,7 @@
             static const uint8_t GPIO_D3 = 3;
             static const uint8_t GPIO_D2 = 2;
 
+            static const uint8_t PUERTO_GENERICO_2 = 0x04;
             static const uint8_t GPIO_A12 = PIN_A12;
             static const uint8_t GPIO_A13 = PIN_A13;
             static const uint8_t GPIO_D39 = 39;
@@ -51,14 +54,11 @@
             static const uint8_t TIPO_JK = 0x25;
 
             LogicGates();
-            // BCD methods
-            void obtenerBinario(uint8_t puerto_entrada);
-            uint8_t obtenerSegmento(uint8_t segmento);
 
         private:
 
-            Port _port_1;
-            Port _port_2;
+            MentorPort::Port _port_1;
+            MentorPort::Port _port_2;
 
     };
 

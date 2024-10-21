@@ -20,7 +20,7 @@ LogicGatesFlipFlopJK::LogicGatesFlipFlopJK(
     _gpio_K = gpio_K;
     _gpio_Q = gpio_Q;
     _gpio_Qnot = gpio_Qnot;
-    _gpio_clk = _gpio_clk;
+    _gpio_clk = gpio_clk;
     _last_clk_state = false;
 
     pinMode(_gpio_Q, OUTPUT);
@@ -58,6 +58,8 @@ void LogicGatesFlipFlopJK::actualizar()
             digitalWrite(_gpio_Q, LOW);
 
         }
+
+        digitalWrite(_gpio_Qnot, !digitalRead(_gpio_Q));
 
     }
 

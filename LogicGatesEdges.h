@@ -22,6 +22,6 @@
             bool _last_state;
             uint8_t _gpio_in;
 
-    }
+    };
 
 #endif

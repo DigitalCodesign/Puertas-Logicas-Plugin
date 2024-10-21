@@ -21,7 +21,8 @@
 
             uint8_t _gpio_in;
             uint16_t _count;
+            bool _last_state;
 
-    }
+    };
 
 #endif
