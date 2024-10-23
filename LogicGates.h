@@ -6,12 +6,6 @@
  * 
  * Declaración de atributos y métodos para la clase LogicGate, referida
  * al Entrenador de Puertas Lógicas y las funcionalidades emuladas por software.
- * 
- * -> Timers.
- * -> Contadores.
- * -> Flip-Flops.
- * -> Detectores de Flanco.
- * -> Generador de Señales.
  */
 
 #include <Arduino.h>
@@ -48,17 +42,8 @@
 
             static const uint8_t MILISEGUNDOS = 0x20;
             static const uint8_t MICROSEGUNDOS = 0x21;
-            static const uint8_t TIPO_D = 0x22;
-            static const uint8_t TIPO_T = 0x23;
-            static const uint8_t TIPO_SR = 0x24;
-            static const uint8_t TIPO_JK = 0x25;
 
             LogicGates();
-
-        private:
-
-            MentorPort::Port _port_1;
-            MentorPort::Port _port_2;
 
     };
 

@@ -1,5 +1,11 @@
 /**
+ * LogicGatesBCD.h - Librería para compatibilizar funcionamiento del Entrenador de Puertas
+ * Logicas con MentorBit.
  * 
+ * Creado el 18/10/2024 - ingenieria@digitalcodesign.com
+ * 
+ * Declaración de atributos y métodos para la clase LogicGatesBCD, referida
+ * a la gestión de BCDs.
 */
 
 #ifndef LogicGatesBCD_h

@@ -1,11 +1,24 @@
 /**
+ * LogicGatesFlipFlopJK.cpp - Librería para compatibilizar funcionamiento del Entrenador de Puertas
+ * Logicas con MentorBit.
  * 
+ * Creado el 18/10/2024 - ingenieria@digitalcodesign.com
+ * 
+ * Definición de la clase LogicGatesFlipFlopJK, referida a la gestión de Flip Flops de tipo JK.
  */
 
 #include "LogicGatesFlipFlopJK.h"
 
 /**
+ * Constructor de la clase LogicGatesFlipFlopJK indicando como argumentos los pines del
+ * conexionado del Flip Flop tipo JK.
  * 
+ * @param:
+ *  - uint8_t gpio_J: Pin de conexión de la entrada J del Flip Flop.
+ *  - uint8_t gpio_K: Pin de conexión de la entrada K del Flip Flop.
+ *  - uint8_t gpio_Q: Pin de conexión de la salida Q del Flip Flop.
+ *  - uint8_t gpio_Qnot: Pin de conexión de la salida Q negada del Flip Flop.
+ *  - uint8_t gpio_clk: Pin de conexión de la entrada de reloj clk del Flip Flop.
  */
 LogicGatesFlipFlopJK::LogicGatesFlipFlopJK(
     uint8_t gpio_J,
@@ -31,7 +44,8 @@ LogicGatesFlipFlopJK::LogicGatesFlipFlopJK(
 }
 
 /**
- * 
+ * Método que debe invocarse constantemente para actualizar el estado de las salidas
+ * del Flip Flop tipo JK tras comprobar las entradas del mismo.
  */
 void LogicGatesFlipFlopJK::actualizar()
 {
@@ -68,7 +82,7 @@ void LogicGatesFlipFlopJK::actualizar()
 }
 
 /**
- * 
+ * Método para establecer un Set en las salidas en el Flip Flop tipo JK.
  */
 void LogicGatesFlipFlopJK::setear()
 {
@@ -79,7 +93,7 @@ void LogicGatesFlipFlopJK::setear()
 }
 
 /**
- * 
+ * Método para establecer un Reset en las salidas en el Flip Flop tipo JK.
  */
 void LogicGatesFlipFlopJK::resetear()
 {
@@ -90,7 +104,7 @@ void LogicGatesFlipFlopJK::resetear()
 }
 
 /**
- * 
+ * Método que devuelve el estado de la salida Q del Flip Flop tipo JK.
  */
 uint8_t LogicGatesFlipFlopJK::obtenerQ()
 {
@@ -100,7 +114,7 @@ uint8_t LogicGatesFlipFlopJK::obtenerQ()
 }
 
 /**
- * 
+ * Método que devuelve el estado de la salida Q negada del Flip Flop tipo JK.
  */
 uint8_t LogicGatesFlipFlopJK::obtenerQnegada()
 {

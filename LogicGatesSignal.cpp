@@ -1,11 +1,21 @@
 /**
+ * LogicGatesSignal.cpp - Librería para compatibilizar funcionamiento del Entrenador de Puertas
+ * Logicas con MentorBit.
  * 
+ * Creado el 18/10/2024 - ingenieria@digitalcodesign.com
+ * 
+ * Definición de la clase LogicGateSignal, referida a la gestión de Señales generadas.
  */
 
 #include "LogicGatesSignal.h"
 
 /**
+ * Constructor de la clase LogicGatesSignal indicando como argumentos los parámetros para
+ * la Señal que se desea generar.
  * 
+ * @param:
+ *  - uint8_t gpio_salida: Pin del microcontrolador donde generar la Señal creada.
+ *  - uint16_t frecuencia: Frecuencia de oscilación de la Señal creada.
  */
 LogicGatesSignal::LogicGatesSignal(uint8_t gpio_salida, uint16_t frecuencia)
 {
@@ -21,7 +31,7 @@ LogicGatesSignal::LogicGatesSignal(uint8_t gpio_salida, uint16_t frecuencia)
 }
 
 /**
- * 
+ * Método para habilitar la generación de la Señal creada.
  */
 void LogicGatesSignal::iniciar()
 {
@@ -31,7 +41,7 @@ void LogicGatesSignal::iniciar()
 }
 
 /**
- * 
+ * Método para deshabilitar la generación de la Señal creada.
  */
 void LogicGatesSignal::detener()
 {
@@ -41,7 +51,10 @@ void LogicGatesSignal::detener()
 }
 
 /**
+ * Método para modificar la frecuencia de oscilación de la Señal creada.
  * 
+ * @param:
+ *  - uint16_t frecuencia: Nueva frecuencia de oscilación deseada para la Señal.
  */
 void LogicGatesSignal::editarFrecuencia(uint16_t frecuencia)
 {
@@ -52,7 +65,8 @@ void LogicGatesSignal::editarFrecuencia(uint16_t frecuencia)
 }
 
 /**
- * 
+ * Método que debe llamarse constantemente para actualizar el estado de la señal
+ * y realizar las oscilaciones correspondientes en los momentos adecuados.
  */
 uint8_t LogicGatesSignal::actualizar()
 {

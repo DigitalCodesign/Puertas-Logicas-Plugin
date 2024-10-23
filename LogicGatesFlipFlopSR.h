@@ -1,5 +1,11 @@
 /**
+ * LogicGatesFlipFlopSR.h - Librería para compatibilizar funcionamiento del Entrenador de Puertas
+ * Logicas con MentorBit.
  * 
+ * Creado el 18/10/2024 - ingenieria@digitalcodesign.com
+ * 
+ * Declaración de atributos y métodos para la clase LogicGatesFlipFlopSR, referida
+ * a la gestión de Flip Flops de tipo SR.
  */
 
 #ifndef LogicGatesFlipFlopSR_h

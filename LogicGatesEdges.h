@@ -1,5 +1,11 @@
 /**
+ * LogicGatesEdges.h - Librería para compatibilizar funcionamiento del Entrenador de Puertas
+ * Logicas con MentorBit.
  * 
+ * Creado el 18/10/2024 - ingenieria@digitalcodesign.com
+ * 
+ * Declaración de atributos y métodos para la clase LogicGatesEdges, referida
+ * a la gestión de Detectores de flanco.
  */
 
 #ifndef LogicGatesEdges_h

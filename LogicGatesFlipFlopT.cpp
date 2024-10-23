@@ -1,11 +1,23 @@
 /**
+ * LogicGatesFlipFlopT.cpp - Librería para compatibilizar funcionamiento del Entrenador de Puertas
+ * Logicas con MentorBit.
  * 
+ * Creado el 18/10/2024 - ingenieria@digitalcodesign.com
+ * 
+ * Definición de la clase LogicGatesFlipFlopT, referida a la gestión de Flip Flops de tipo T.
  */
 
 #include "LogicGatesFlipFlopT.h"
 
 /**
+ * Constructor de la clase LogicGatesFlipFlopT indicando como argumentos los pines del
+ * conexionado del Flip Flop tipo T.
  * 
+ * @param:
+ *  - uint8_t gpio_T: Pin de conexión de la entrada T del Flip Flop.
+ *  - uint8_t gpio_Q: Pin de conexión de la salida Q del Flip Flop.
+ *  - uint8_t gpio_Qnot: Pin de conexión de la salida Q negada del Flip Flop.
+ *  - uint8_t gpio_clk: Pin de conexión de la entrada de reloj clk del Flip Flop.
  */
 
 LogicGatesFlipFlopT::LogicGatesFlipFlopT(
@@ -30,7 +42,8 @@ LogicGatesFlipFlopT::LogicGatesFlipFlopT(
 }
 
 /**
- * 
+ * Método que debe invocarse constantemente para actualizar el estado de las salidas
+ * del Flip Flop tipo T tras comprobar las entradas del mismo.
  */
 void LogicGatesFlipFlopT::actualizar()
 {
@@ -51,7 +64,7 @@ void LogicGatesFlipFlopT::actualizar()
 }
 
 /**
- * 
+ * Método para establecer un Set en las salidas en el Flip Flop tipo T.
  */
 void LogicGatesFlipFlopT::setear()
 {
@@ -62,7 +75,7 @@ void LogicGatesFlipFlopT::setear()
 }
 
 /**
- * 
+ * Método para establecer un Reset en las salidas en el Flip Flop tipo T.
  */
 void LogicGatesFlipFlopT::resetear()
 {
@@ -73,7 +86,7 @@ void LogicGatesFlipFlopT::resetear()
 }
 
 /**
- * 
+ * Método que devuelve el estado de la salida Q del Flip Flop tipo T.
  */
 uint8_t LogicGatesFlipFlopT::obtenerQ()
 {
@@ -83,7 +96,7 @@ uint8_t LogicGatesFlipFlopT::obtenerQ()
 }
 
 /**
- * 
+ * Método que devuelve el estado de la salida Q negada del Flip Flop tipo T.
  */
 uint8_t LogicGatesFlipFlopT::obtenerQnegada()
 {

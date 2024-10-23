@@ -1,9 +1,21 @@
 /**
+ * LogicGatesEdges.cpp - Librería para compatibilizar funcionamiento del Entrenador de Puertas
+ * Logicas con MentorBit.
  * 
+ * Creado el 18/10/2024 - ingenieria@digitalcodesign.com
+ * 
+ * Definición de la clase LogicGatesEdges, referida a la gestión de Detectores de Flanco.
  */
 
 #include "LogicGatesEdges.h"
 
+/**
+ * Constructor de la clase LogicGatesFlipFlopD indicando como argumento el pin donde
+ * obtener las lecturas en busca de Flancos.
+ * 
+ * @param:
+ *  - uint8_t gpio_entrada: Pin de conexión donde detectar Flancos.
+ */
 LogicGatesEdges::LogicGatesEdges(uint8_t gpio_entrada)
 {
 
@@ -12,6 +24,9 @@ LogicGatesEdges::LogicGatesEdges(uint8_t gpio_entrada)
 
 }
 
+/**
+ * Método para detectar un cambio de Baja a Alta, es decir, Flanco de Subida.
+ */
 bool LogicGatesEdges::comprobarFlancoSubida()
 {
 
@@ -23,6 +38,9 @@ bool LogicGatesEdges::comprobarFlancoSubida()
 
 }
 
+/**
+ * Método para detectar un cambio de Alta a Baja, es decir, Flanco de Bajada.
+ */
 bool LogicGatesEdges::comprobarFlancoBajada()
 {
 
