@@ -13,7 +13,7 @@ int ultima_cuenta = 0;
 // Bloque de inicialización
 void setup() {
 
-  // Establecemos el estado por defecto del GPIO escogido con PWM
+  // Establecemos el estado por defecto del LED Rojo
   digitalWrite(myMentorBit.LED_ROJO, LOW);
 
 }
